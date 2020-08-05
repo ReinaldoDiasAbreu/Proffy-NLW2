@@ -6,7 +6,7 @@
 Reposítório com o conteúdo estudado na na NLW2 2020 da Rocketseat.
 ```
 
-O projeto consciste em uma plataforma para ligar professores particulares aos alunos.
+O projeto consiste em uma plataforma para ligar professores particulares aos alunos.
 
 ### Links do Evento:
 
