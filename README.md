@@ -1,6 +1,6 @@
 
 <p align="center">
-   <img src="./public/images/logo.svg" alt="Proffy" width="280"/>
+   <img src="./screenshot/logo.png" alt="Proffy" width="280"/>
 </p>
 
 <p align="center">	
