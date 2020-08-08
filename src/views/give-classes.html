@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proffy | Sua plataforma de estudos online</title>
+    <link rel="shortcut icon " href="/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/partials/header.css">
     <link rel="stylesheet" href="/styles/partials/page-give-classes.css">
@@ -31,7 +32,7 @@
         </header>
 
         <main>
-            <form action="" id="create-class">
+            <form action="/save-classes" id="create-class" method="POST">
                 <fieldset>
                     <legend>Seus dados</legend>
                     <div class="input-block">
@@ -43,7 +44,7 @@
                         <input type="url" name="avatar" id="avatar" required>
                     </div>
                     <div class="input-block">
-                        <label for="whatsapp">Whatsapp <small>somente números</small></label>
+                        <label for="whatsapp">Whatsapp <small>(somente números)</small></label>
                         <input type="number" name="whatsapp" id="whatsapp" required>
                     </div>
 
@@ -59,16 +60,9 @@
                         <label for="subject"> Matéria</label>
                         <select name="subject" id="subject" required>
                             <option value="">Selecione uma opção</option>
-                            <option value="1">Artes</option>
-                            <option value="2">Biologia</option>
-                            <option value="3">Ciências</option>
-                            <option value="4">Educação Física</option>
-                            <option value="5">Física</option>
-                            <option value="6">Geografia</option>
-                            <option value="7">História</option>
-                            <option value="8">Matemática</option>
-                            <option value="9">Português</option>
-                            <option value="10">Química</option>
+                            {%for subject in subjects%}
+                                <option value="{{loop.index}}"> {{subject}} </option>
+                            {%endfor%}
                         </select>
                     </div>
                     <div class="input-block">
@@ -88,13 +82,9 @@
                             <label for="weekday">Dia da semana</label>
                             <select name="weekday[]"required>
                                 <option value="">Selecione uma opção</option>
-                                <option value="0">Domingo</option>
-                                <option value="1">Segunda-feira</option>
-                                <option value="2">Terça-feira</option>
-                                <option value="3">Quarta-feira</option>
-                                <option value="4">Quinta-feira</option>
-                                <option value="5">Sexta-feira</option>
-                                <option value="6">Sábado</option>
+                                {%for weekday in weekdays%}
+                                    <option value="{{loop.index0}}"> {{weekday}} </option>
+                                {%endfor%}
                             </select>
                         </div>
                         <div class="input-block">
